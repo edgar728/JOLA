@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juego - Sistema Bursátil Mexicano</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🧠 Sistema Bursátil Mexicano — Practica</h1>
+      <p class="subtitle">Elige modo y responde. El juego te dirá inmediatamente si tu respuesta es correcta.</p>
+    </header>
+
+    <section id="mode-panel" class="panel">
+      <p>Selecciona el tipo de preguntas:</p>
+      <div class="mode-buttons">
+        <button id="openMode" class="btn">Preguntas abiertas</button>
+        <button id="choiceMode" class="btn">Opción múltiple</button>
+      </div>
+    </section>
+
+    <section id="quiz-panel" class="panel hidden">
+      <div class="meta">
+        <div>Pregunta <span id="current">1</span>/<span id="total">40</span></div>
+        <div>Acertadas: <span id="score">0</span></div>
+      </div>
+
+      <h2 id="question" class="question">Pregunta aparecerá aquí</h2>
+
+      <div id="open-area" class="answer-area">
+        <input id="textAnswer" type="text" placeholder="Escribe tu respuesta..." />
+      </div>
+
+      <div id="choice-area" class="answer-area hidden"></div>
+
+      <div class="actions">
+        <button id="submitBtn" class="btn primary">Responder</button>
+        <button id="nextBtn" class="btn" style="display:none">Siguiente</button>
+      </div>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+    </section>
+
+    <section id="result-panel" class="panel hidden">
+      <h2 id="result-title"></h2>
+      <p id="result-text"></p>
+      <div class="actions">
+        <button id="restartBtn" class="btn primary">Reiniciar</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Juego educativo — responde y aprende. Hecho para practicar.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
